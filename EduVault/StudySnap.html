@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySnap</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            <span>StudySnap</span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <button class="nav-item active" data-page="dashboard">
+                <span>⌂</span>
+                <span>Dashboard</span>
+            </button>
+
+            <button class="nav-item" data-page="library">
+                <span>📚</span>
+                <span>Library</span>
+            </button>
+
+            <button class="nav-item" data-page="tasks">
+                <span>✓</span>
+                <span>Tasks</span>
+            </button>
+
+            <button class="nav-item" data-page="focus">
+                <span>⏱</span>
+                <span>Focus</span>
+            </button>
+
+            <button class="nav-item" data-page="doubts">
+                <span>?</span>
+                <span>Doubts</span>
+            </button>
+
+            <button class="nav-item" data-page="bookmarks">
+                <span>🔖</span>
+                <span>Bookmarks</span>
+            </button>
+
+            <button class="nav-item" data-page="favourites">
+                <span>★</span>
+                <span>Favourites</span>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button class="nav-item" data-page="profile">
+                <span>👤</span>
+                <span>Profile</span>
+            </button>
+
+            <button class="nav-item" data-page="settings">
+                <span>⚙</span>
+                <span>Settings</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN AREA -->
+    <div class="main-area">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <h3>StudySnap</h3>
+            </div>
+
+            <div class="topbar-user">
+                <div class="notification">🔔</div>
+
+                <div>
+                    <strong id="topbarName">Nihal</strong>
+                    <small>Student</small>
+                </div>
+
+                <div class="avatar" id="topbarAvatar">N</div>
+            </div>
+
+        </header>
+
+
+        <main class="content">
+
+
+            <!-- ================= DASHBOARD ================= -->
+
+            <section id="dashboardPage" class="page active">
+
+                <div class="page-header">
+                    <div>
+                        <p class="eyebrow">YOUR STUDY SPACE</p>
+                        <h1 id="dashboardGreeting">Good evening, Nihal 👋</h1>
+                        <p class="page-subtitle">
+                            Keep your study material organized and your progress on track.
+                        </p>
+                    </div>
+
+                    <div class="streak-card">
+                        🔥
+                        <strong>7 Day Streak</strong>
+                    </div>
+                </div>
+
+
+                <!-- RESUME -->
+                <section class="resume-card">
+
+                    <div class="resume-info">
+
+                        <span class="small-label">CONTINUE LEARNING</span>
+
+                        <h2>Integration — Unit 3</h2>
+
+                        <p>
+                            Mathematics • PDF • Page 14
+                        </p>
+
+                        <div class="progress-bar">
+                            <div style="width:68%"></div>
+                        </div>
+
+                        <span class="progress-text">68% completed</span>
+
+                    </div>
+
+                    <button class="primary-btn" id="continueBtn">
+                        Continue →
+                    </button>
+
+                </section>
+
+
+                <!-- QUICK ACTIONS -->
+                <section>
+
+                    <div class="section-heading">
+                        <h2>Quick Actions</h2>
+                    </div>
+
+                    <div class="quick-actions">
+
+                        <button class="quick-card" id="addMaterialBtn">
+                            <div class="quick-icon">＋</div>
+                            <strong>Add Material</strong>
+                            <span>Save notes, PDFs or links</span>
+                        </button>
+
+                        <button class="quick-card" id="searchBtn">
+                            <div class="quick-icon">⌕</div>
+                            <strong>Search Library</strong>
+                            <span>Find your study material</span>
+                        </button>
+
+                        <button class="quick-card" id="focusBtn">
+                            <div class="quick-icon">⏱</div>
+                            <strong>Focus Session</strong>
+                            <span>Start a study session</span>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SUBJECTS -->
+                <section>
+
+                    <div class="section-heading">
+                        <h2>My Subjects</h2>
+                        <button class="text-btn" id="viewLibraryBtn">
+                            View Library →
+                        </button>
+                    </div>
+
+                    <div class="subject-grid">
+
+                        <button class="subject-card" data-subject="Mathematics">
+                            <span class="subject-icon math">∫</span>
+                            <strong>Mathematics</strong>
+                            <span>12 files</span>
+
+                            <div class="subject-progress">
+                                <div style="width:72%"></div>
+                            </div>
+
+                            <small>72%</small>
+                        </button>
+
+                        <button class="subject-card" data-subject="Programming">
+                            <span class="subject-icon programming">&lt;/&gt;</span>
+                            <strong>Programming</strong>
+                            <span>18 files</span>
+
+                            <div class="subject-progress">
+                                <div style="width:58%"></div>
+                            </div>
+
+                            <small>58%</small>
+                        </button>
+
+                        <button class="subject-card" data-subject="Physics">
+                            <span class="subject-icon physics">⚡</span>
+                            <strong>Physics</strong>
+                            <span>9 files</span>
+
+                            <div class="subject-progress">
+                                <div style="width:45%"></div>
+                            </div>
+
+                            <small>45%</small>
+                        </button>
+
+                        <button class="subject-card" data-subject="Chemistry">
+                            <span class="subject-icon chemistry">⚗</span>
+                            <strong>Chemistry</strong>
+                            <span>7 files</span>
+
+                            <div class="subject-progress">
+                                <div style="width:34%"></div>
+                            </div>
+
+                            <small>34%</small>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RECENT MATERIALS -->
+                <section>
+
+                    <div class="section-heading">
+                        <h2>Recent Materials</h2>
+
+                        <button class="text-btn" id="recentLibraryBtn">
+                            See all →
+                        </button>
+                    </div>
+
+                    <div id="recentMaterials" class="recent-materials"></div>
+
+                </section>
+
+            </section>
+
+
+            <!-- ================= LIBRARY ================= -->
+
+            <section id="libraryPage" class="page hidden">
+
+                <div class="page-header">
+
+                    <div>
+                        <p class="eyebrow">YOUR MATERIALS</p>
+                        <h1>Library</h1>
+                        <p class="page-subtitle">
+                            Everything you save, organized in one place.
+                        </p>
+                    </div>
+
+                    <button class="primary-btn" id="libraryAddBtn">
+                        + Add Material
+                    </button>
+
+                </div>
+
+
+                <div class="library-search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="librarySearch"
+                        placeholder="Search notes, PDFs, links..."
+                    >
+
+                </div>
+
+
+                <div class="filters">
+
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-filter="Mathematics">
+                        Mathematics
+                    </button>
+
+                    <button class="filter-btn" data-filter="Programming">
+                        Programming
+                    </button>
+
+                    <button class="filter-btn" data-filter="Physics">
+                        Physics
+                    </button>
+
+                    <button class="filter-btn" data-filter="Chemistry">
+                        Chemistry
+                    </button>
+
+                    <button class="filter-btn" data-type="PDF">
+                        PDF
+                    </button>
+
+                    <button class="filter-btn" data-type="LINK">
+                        Link
+                    </button>
+
+                    <button class="filter-btn" data-type="NOTE">
+                        Note
+                    </button>
+
+                </div>
+
+
+                <div id="libraryMaterials" class="library-grid"></div>
+
+                <div id="noResults" class="empty-state hidden">
+
+                    <div class="empty-icon">📂</div>
+
+                    <h2>No materials found</h2>
+
+                    <p>
+                        Try another search or add some study material.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MATERIAL REVIEW ================= -->
+
+            <section id="materialPage" class="page hidden">
+
+                <div class="review-top">
+
+                    <button class="back-btn" onclick="showPage('library')">
+                        ← Back to Library
+                    </button>
+
+                </div>
+
+                <div id="materialReview"></div>
+
+            </section>
+
+
+            <!-- ================= TASKS ================= -->
+
+            <section id="tasksPage" class="page hidden">
+
+                <div class="page-header">
+
+                    <div>
+                        <p class="eyebrow">STAY ORGANIZED</p>
+                        <h1>Tasks</h1>
+                        <p class="page-subtitle">
+                            Keep track of everything you need to finish.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="task-input-card">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you need to do?"
+                    >
+
+                    <button class="primary-btn" id="addTaskBtn">
+                        Add Task
+                    </button>
+
+                </div>
+
+
+                <div class="task-stats">
+
+                    <div>
+                        <strong id="totalTasks">0</strong>
+                        <span>Total</span>
+                    </div>
+
+                    <div>
+                        <strong id="completedTasks">0</strong>
+                        <span>Completed</span>
+                    </div>
+
+                    <div>
+                        <strong id="pendingTasks">0</strong>
+                        <span>Pending</span>
+                    </div>
+
+                </div>
+
+
+                <div id="taskList" class="task-list"></div>
+
+            </section>
+
+
+            <!-- ================= FOCUS ================= -->
+
+            <section id="focusPage" class="page hidden">
+
+                <div class="page-header">
+
+                    <div>
+                        <p class="eyebrow">DEEP WORK</p>
+                        <h1>Focus Session</h1>
+                        <p class="page-subtitle">
+                            Put distractions aside and focus on one thing.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="focus-container">
+
+                    <div class="timer-card">
+
+                        <span>FOCUS SESSION</span>
+
+                        <div id="timerDisplay" class="timer-display">
+                            25:00
+                        </div>
+
+                        <div class="timer-buttons">
+
+                            <button class="primary-btn" id="startTimerBtn">
+                                Start
+                            </button>
+
+                            <button class="secondary-btn" id="resetTimerBtn">
+                                Reset
+                            </button>
+
+                        </div>
+
+                        <button class="text-btn" id="addFiveBtn">
+                            +5 minutes
+                        </button>
+
+                        <p class="session-count">
+                            Sessions completed:
+                            <strong id="sessionCount">0</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= DOUBTS ================= -->
+
+            <section id="doubtsPage" class="page hidden">
+
+                <div class="page-header">
+
+                    <div>
+                        <p class="eyebrow">CLEAR YOUR QUESTIONS</p>
+                        <h1>Doubts</h1>
+                        <p class="page-subtitle">
+                            Keep questions you want to revisit.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="coming-soon-card">
+
+                    <div class="coming-icon">?</div>
+
+                    <h2>Doubt Solver</h2>
+
+                    <p>
+                        This section can later connect to an AI doubt-solving
+                        feature.
+                    </p>
+
+                    <span class="demo-badge">
+                        Coming Soon
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= BOOKMARKS ================= -->
+
+            <section id="bookmarksPage" class="page hidden">
+
+                <div class="page-header">
+
+                    <div>
+                        <p class="eyebrow">SAVED POSITIONS</p>
+                        <h1>Bookmarks</h1>
+                        <p class="page-subtitle">
+                            Jump back to pages you bookmarked while studying.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div id="bookmarksList"></div>
+
+            </section>
+
+
+            <!-- ================= FAVOURITES ================= -->
+
+            <section id="favouritesPage" class="page hidden">
+
+                <div class="page-header">
+
+                    <div>
+                        <p class="eyebrow">YOUR FAVOURITES</p>
+                        <h1>Favourites</h1>
+                        <p class="page-subtitle">
+                            Your most important study materials.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div id="favouritesList" class="library-grid"></div>
+
+            </section>
+
+
+            <!-- ================= PROFILE ================= -->
+
+            <section id="profilePage" class="page hidden">
+
+                <div class="page-header">
+
+                    <div>
+                        <p class="eyebrow">YOUR ACCOUNT</p>
+                        <h1>Profile</h1>
+                        <p class="page-subtitle">
+                            Manage your student information.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="profile-avatar">
+                        N
+                    </div>
+
+                    <div class="profile-form">
+
+                        <label>
+                            Name
+                            <input
+                                type="text"
+                                id="profileName"
+                                placeholder="Enter your name"
+                            >
+                        </label>
+
+                        <label>
+                            Email ID
+                            <input
+                                type="email"
+                                id="profileEmail"
+                                placeholder="Enter your email"
+                            >
+                        </label>
+
+                        <label>
+                            Class
+                            <input
+                                type="text"
+                                id="profileClass"
+                                placeholder="Example: B.Tech CSE"
+                            >
+                        </label>
+
+                        <label>
+                            Register Number
+                            <input
+                                type="text"
+                                id="profileRegister"
+                                placeholder="Enter register number"
+                            >
+                        </label>
+
+                        <button class="primary-btn" id="saveProfileBtn">
+                            Save Profile
+                        </button>
+
+                        <p id="profileMessage" class="success-message"></p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SETTINGS ================= -->
+
+            <section id="settingsPage" class="page hidden">
+
+                <div class="page-header">
+
+                    <div>
+                        <p class="eyebrow">PREFERENCES</p>
+                        <h1>Settings</h1>
+                        <p class="page-subtitle">
+                            Customize your StudySnap experience.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-list">
+
+                    <div class="settings-card">
+
+                        <div>
+                            <strong>Dark Mode</strong>
+                            <p>Use a darker appearance while studying.</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="settings-card danger-setting">
+
+                        <div>
+                            <strong>Log Out</strong>
+                            <p>Sign out of your StudySnap account.</p>
+                        </div>
+
+                        <button class="danger-btn" id="logoutBtn">
+                            Log Out
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= ADD MATERIAL MODAL ================= -->
+
+    <div id="addMaterialModal" class="modal hidden">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    <h2>Add Material</h2>
+                    <p>Save your study material to StudySnap.</p>
+                </div>
+
+                <button id="closeModalBtn" class="close-btn">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="material-type-selector">
+
+                <button
+                    class="type-option active"
+                    data-material-type="PDF">
+                    📄 PDF
+                </button>
+
+                <button
+                    class="type-option"
+                    data-material-type="LINK">
+                    🔗 Link
+                </button>
+
+                <button
+                    class="type-option"
+                    data-material-type="NOTE">
+                    📝 Note
+                </button>
+
+            </div>
+
+
+            <form id="materialForm">
+
+                <label>
+                    Title
+
+                    <input
+                        type="text"
+                        id="materialTitle"
+                        placeholder="Example: Integration Notes"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+                    Subject
+
+                    <select id="materialSubject">
+
+                        <option value="Mathematics">
+                            Mathematics
+                        </option>
+
+                        <option value="Programming">
+                            Programming
+                        </option>
+
+                        <option value="Physics">
+                            Physics
+                        </option>
+
+                        <option value="Chemistry">
+                            Chemistry
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+                    Topic
+
+                    <input
+                        type="text"
+                        id="materialTopic"
+                        placeholder="Example: Integration"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+                    Source
+
+                    <select id="materialSource">
+
+                        <option value="WhatsApp">
+                            WhatsApp
+                        </option>
+
+                        <option value="Class Group">
+                            Class Group
+                        </option>
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                        <option value="Teacher">
+                            Teacher
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <!-- PDF -->
+                <div id="pdfInputSection">
+
+                    <label>
+                        Select PDF
+
+                        <input
+                            type="file"
+                            id="materialFile"
+                            accept=".pdf,application/pdf"
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <!-- LINK -->
+                <div id="linkInputSection" class="hidden">
+
+                    <label>
+                        Link
+
+                        <input
+                            type="url"
+                            id="materialLink"
+                            placeholder="https://example.com"
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <!-- NOTE -->
+                <div id="noteInputSection" class="hidden">
+
+                    <label>
+                        Note
+
+                        <textarea
+                            id="materialNote"
+                            rows="6"
+                            placeholder="Write your notes here..."
+                        ></textarea>
+
+                    </label>
+
+                </div>
+
+
+                <p id="formError" class="form-error"></p>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelModalBtn">
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-btn">
+                        Save Material
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Firebase -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
